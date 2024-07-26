@@ -39,7 +39,7 @@ class JobServiceIT extends BaseTest {
 
 	@Test
 	public void postJobTest() {
-		var dto = JobDto.create(null, "k8s engr", "google", Set.of("k8s"), 200000, true);
+		var dto = JobDto.create(null, "k8s engr", "google", Set.of("k8s"), 200000, true, null);
 		this.client.post()
 				.uri("/job")
 				.bodyValue(dto)
